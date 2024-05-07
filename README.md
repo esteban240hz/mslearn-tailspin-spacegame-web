@@ -1,3 +1,10 @@
+# Project Title
+
+Brief description of the project.
+
+## Build Status
+
+[![Build Status](https://dev.azure.com/luismorocho18/Space%20Game%20Web%20-%20workflow/_apis/build/status/mslearn-tailspin-spacegame-web?branchName=code-workflow)](https://dev.azure.com/luismorocho18/Space%20Game%20Web%20-%20workflow/_build/latest?definitionId=2&branchName=code-workflow)
 
 # Contributing
 
