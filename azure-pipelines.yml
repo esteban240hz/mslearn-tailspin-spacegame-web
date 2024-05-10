@@ -48,13 +48,13 @@ steps:
     arguments: '--no-restore --configuration $(buildConfiguration)'
     projects: '*/.csproj'  # Modified to include all csproj files in the repo
 
-- task: DotNetCoreCLI@2
+- - task: DotNetCoreCLI@2
   displayName: 'Run unit tests - $(buildConfiguration)'
   inputs:
     command: 'test'
-    arguments: '--no-build --configuration $(buildConfiguration)'
-    publishTestResults: true
-    projects: '*/.Tests.csproj'  # Ensure this matches your test project naming
+    projects: '**/Tailspin.SpaceGame.Web.Tests.csproj'
+    arguments: '--configuration $(buildConfiguration) --no-build'
+    publishTestResults: true # Ensure this matches your test project naming
 
 - task: DotNetCoreCLI@2
   displayName: 'Publish the project - $(buildConfiguration)'
