@@ -13,9 +13,12 @@ variables:
 
 steps:
 - task: UseDotNet@2
-  displayName: 'Use .NET SDK $(dotnetSdkVersion)'
+  displayName: 'Install specific dotnet SDK'
   inputs:
-    version: '$(dotnetSdkVersion)'
+    packageType: 'sdk'
+    version: '6.x'
+    installationPath: $(Agent.ToolsDirectory)/dotnet
+    
 
 - task: Npm@1
   displayName: 'Run npm install'
